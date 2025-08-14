@@ -35,7 +35,7 @@ type CommonMessageData = {
   nonce: number; // This nonce makes sense only for v1 events, as it's emitted on src chain send
   nonceHash: string;
 };
-// Common data + auxilary data from depositForBurn event
+// Common data + auxiliary data from depositForBurn event
 type DepositForBurnMessageData = CommonMessageData & { amount: string; mintRecipient: string; burnToken: string };
 type CommonMessageEvent = CommonMessageData & { log: Log };
 type DepositForBurnMessageEvent = DepositForBurnMessageData & { log: Log };
@@ -448,7 +448,7 @@ function getRelevantCCTPEventsFromReceipt(
     the logs array, not necessarily consecutively)
   */
 
-  // Indicies of individual `MessageSent` events in `receipt.logs`
+  // Indices of individual `MessageSent` events in `receipt.logs`
   const messageSentIndicies = [];
   // Pairs of indicies representing a single CCTP token transfer
   const depositIndexPairs = [];
